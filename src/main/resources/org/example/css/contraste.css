@@ -1,0 +1,216 @@
+* {
+    -fx-primary-color: #000000; /* Negro para un contraste fuerte */
+    -fx-secondary-color: #444444; /* Gris oscuro */
+    -fx-help-color: #0088FF; /* Azul brillante */
+    -fx-help-color-hover: #0066CC; /* Azul oscuro */
+    -fx-warning-color: #FFA500; /* Naranja brillante */
+    -fx-warning-color-hover: #CC8400; /* Naranja oscuro */
+    -fx-danger-color: #FF0000; /* Rojo brillante */
+    -fx-danger-color-hover: #CC0000; /* Rojo oscuro */
+    -fx-success-color: #00FF00; /* Verde brillante */
+    -fx-success-color-hover: #00CC00; /* Verde oscuro */
+    -fx-focus-color: -fx-secondary-color;
+    -fx-text-base-color: #FFFFFF; /* Blanco para el texto */
+    -fx-hover-base: #CCCCCC; /* Gris claro para estados de hover */
+    -fx-selection-bar: #FFFF00; /* Amarillo para selección */
+    -fx-selection-bar-text: #000000; /* Negro para texto de selección */
+}
+
+.btn-success {
+    -fx-background-color: -fx-success-color;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.btn-success:hover {
+    -fx-background-color: -fx-success-color-hover;
+}
+
+.btn-confirmar {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.btn-confirmar:hover {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.btn-warning {
+    -fx-background-color: -fx-warning-color;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.btn-warning:hover {
+    -fx-background-color: -fx-warning-color-hover;
+}
+
+.btn-danger {
+    -fx-background-color: -fx-danger-color;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.btn-danger:hover {
+    -fx-background-color: -fx-danger-color-hover;
+}
+
+.btn-ayuda {
+    -fx-background-color: -fx-help-color;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10px;
+}
+
+.btn-ayuda:hover {
+    -fx-background-color: -fx-help-color-hover;
+}
+
+.background {
+    -fx-background-color: #000000; /* Negro para fondo */
+}
+
+.menu-bar {
+    -fx-background-color: -fx-primary-color;
+}
+
+.menu-bar .menu {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-font-weight: bold;
+}
+
+.menu > .label {
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.menu-item > .label {
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.menu-item {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.context-menu {
+    -fx-background-color: -fx-primary-color;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+}
+
+.context-menu .menu-item {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 5 20 5 20;
+}
+
+.context-menu .menu-item:focused {
+    -fx-background-color: -fx-secondary-color;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.context-menu .menu-item:hover {
+    -fx-background-color: -fx-secondary-color;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-background-radius: 0;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.spinner .increment-arrow-button:hover:pressed,
+.spinner .decrement-arrow-button:hover:pressed,
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: -fx-text-base-color;
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: -fx-primary-color;
+    -fx-background-color: -fx-text-base-color;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 3px;
+}
+
+.radio-button .radio:selected {
+    -fx-background-color: -fx-text-base-color;
+    -fx-background-image: null;
+}
+
+.radio-button -radio:armed {
+    -fx-background-color: -fx-text-base-color;
+    -fx-background-image: null;
+}
+
+.radio-button -radio:determinate {
+    -fx-background-color: -fx-text-base-color;
+    -fx-background-image: null;
+}
+
+.radio-button -radio:indeterminate {
+    -fx-background-color: -fx-text-base-color;
+    -fx-background-image: null;
+}
+
+.combo-box .list-cell {
+    -fx-background: -fx-text-base-color;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -fx-text-base-color, -fx-text-base-color;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.6), 8, 0.0, 0, 0);
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-padding: 4 0 4 5;
+    -fx-background-color: -fx-text-base-color;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected,
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: -fx-hover-base;
+}
+
+.combo-box-base {
+    -fx-background-color: -fx-text-base-color, -fx-text-base-color, -fx-text-base-color, -fx-text-base-color;
+}
+
+.combo-box-base:hover {
+    -fx-color: -fx-hover-base;
+}
+
+.combo-box-base:disabled {
+    -fx-opacity: .4;
+}

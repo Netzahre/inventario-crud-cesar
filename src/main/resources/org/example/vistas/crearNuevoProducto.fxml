@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="439.0" prefWidth="473.0" styleClass="background" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorFormularioProducto">
+   <children>
+      <Label layoutX="151.0" layoutY="11.0" styleClass="titulo" text="Crear Producto">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <padding>
+            <Insets bottom="3.0" />
+         </padding>
+      </Label>
+        <fx:include fx:id="formularioProducto" source="../reutilizables/formularioProductos.fxml" AnchorPane.topAnchor="45.0" />
+      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#mostrarAyuda" styleClass="btn-ayuda" text="Ayuda">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

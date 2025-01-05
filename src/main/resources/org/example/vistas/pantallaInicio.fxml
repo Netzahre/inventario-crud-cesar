@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contentArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorInicio">
+   <children>
+      <fx:include source="../reutilizables/menuSuperior.fxml" />
+      <VBox alignment="TOP_CENTER" layoutX="256.0" layoutY="72.0">
+         <children>
+            <Label styleClass="titulo" text="Bienvenid@ a la aplicación de gestión de inventario del CIPF Cesar Manrique" />
+            <Label styleClass="subtitulo" text="Puede usar el menu superior para navegar por las distitnas secciones">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="331.0" layoutY="182.0" prefWidth="714.0">
+         <children>
+            <Label styleClass="subtitulo" text="Instrucciones">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label styleClass="texto-mediano" text="Aula - Permite ver las aulas o crear una nueva">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label styleClass="texto-mediano" text="Productos - Permite ver los productos o crear uno nuevo">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label styleClass="texto-mediano" text="Marcajes - Permite ver los marcajes o crear uno nuevo">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label styleClass="texto-mediano" text="Categoria - Permite ver las categorias o crear una nueva">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label styleClass="texto-mediano" text="Accesibilidad - Posee opciones de accesibilidad como cambiar el modo entre oscuro y claro, el tamaño de texto, etc" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label styleClass="texto-mediano" text="Salir - Cierra la aplicacion">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fitHeight="309.0" fitWidth="773.0" layoutX="297.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

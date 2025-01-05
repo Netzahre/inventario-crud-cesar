@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contentArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorVerAulas">
+    <children>
+        <fx:include source="../reutilizables/menuSuperior.fxml" />
+        <TableView fx:id="tvAulas" layoutY="225.0" prefHeight="546.0" prefWidth="1367.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="93.0" text="Id" />
+                <TableColumn fx:id="colNumeracion" prefWidth="221.0" text="Numeracion" />
+                <TableColumn fx:id="colDescripcion" prefWidth="794.0" text="Descripcion" />
+                <TableColumn fx:id="colIp" minWidth="0.0" prefWidth="257.0" text="Ip" />
+            </columns>
+        </TableView>
+        <VBox alignment="TOP_CENTER" layoutX="479.0" layoutY="34.0">
+            <children>
+                <Label prefHeight="19.0" prefWidth="274.0" styleClass="titulo" text="Informacion de las aulas">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label styleClass="subtitulo" text="Aqui podra ver los datos de las aulas registradas" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Label layoutX="48.0" layoutY="87.0" text="Id - Id del aula&#10;Numeracion - Pabellon.Piso.Aula&#10;Descripcion - Descripcion del aula&#10;Ip - Ip del aula">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <VBox layoutX="1232.0" layoutY="47.0" spacing="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#crearAula" prefHeight="35.0" prefWidth="95.0" styleClass="btn-success" text="Crear">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#modificarAula" prefWidth="95.0" styleClass="btn-warning" text="Modificar">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#borrarAula" prefHeight="35.0" prefWidth="95.0" styleClass="btn-danger" text="Borrar">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Label layoutX="938.0" layoutY="78.0" prefHeight="64.0" prefWidth="274.0" text="Para modificar o borrar un aula, por favor haga click en ella y entonces en el boton modificar o borrar" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

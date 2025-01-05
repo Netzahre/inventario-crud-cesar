@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="424.0" prefWidth="473.0" styleClass="background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorFormularioAula">
+    <children>
+        <VBox layoutX="24.0" layoutY="14.0" spacing="20.0">
+            <children>
+                <VBox alignment="TOP_CENTER" spacing="5.0">
+                    <children>
+                        <Label styleClass="subtitulo" text="Numeracion">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <children>
+                                <Spinner fx:id="spPabellon" prefHeight="27.0" prefWidth="90.0" />
+                                <Label text=".">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Label>
+                                <Spinner fx:id="spPiso" prefHeight="27.0" prefWidth="90.0" />
+                                <Label text=".">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Label>
+                                <Spinner fx:id="spAula" prefHeight="27.0" prefWidth="90.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_CENTER" spacing="5.0">
+                    <children>
+                        <Label styleClass="subtitulo" text="Descripcion">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <TextArea fx:id="taDescripcion" prefHeight="150.0" prefWidth="425.0" promptText="Descripcion del aula" />
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="48.0" prefWidth="425.0" spacing="5.0">
+                    <children>
+                        <Label styleClass="subtitulo" text="ip">
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="tfIp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="268.0" promptText="192.168.1.100" />
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER" spacing="30.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#guardarDatos" styleClass="btn-confirmar" text="Confirmar" fx:id="btGuardar">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" styleClass="btn-warning" text="Limpiar" onAction="#limpiar" fx:id="btLimpiar">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" styleClass="btn-danger" text="Cancelar" onAction="#cancelar">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

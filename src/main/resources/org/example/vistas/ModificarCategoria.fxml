@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="439.0" prefWidth="473.0" styleClass="background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorFormularioCategoria">
+   <children>
+      <Label layoutX="124.0" layoutY="11.0" styleClass="titulo" text="Modificar Categoria">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <padding>
+            <Insets bottom="3.0" />
+         </padding>
+      </Label>
+        <fx:include fx:id="formularioCategoria" source="../reutilizables/formularioCategoria.fxml" AnchorPane.topAnchor="45.0" />
+      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#mostrarAyuda" styleClass="btn-ayuda" text="Ayuda">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

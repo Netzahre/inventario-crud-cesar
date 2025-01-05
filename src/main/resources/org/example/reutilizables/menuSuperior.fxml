@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+<MenuBar prefWidth="1366.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="controlador.controladorMenuSuperior">
+    <menus>
+        <Menu mnemonicParsing="false" styleClass="menu" text="Aula">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#verAulas" text="Ver Aulas"/>
+                <MenuItem mnemonicParsing="false" onAction="#crearNuevaAula" text="Crear nueva aula"/>
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Productos">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#verProductos" text="Ver Productos"/>
+                <MenuItem mnemonicParsing="false" onAction="#crearNuevoProducto" text="Crear nuevo producto"/>
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Marcajes">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#verMarcajes" text="Ver Marcajes"/>
+                <MenuItem mnemonicParsing="false" onAction="#crearNuevoMarcaje" text="Crear nuevo marcaje"/>
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Categoría">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Ver Categoría" onAction="#verCategoria"/>
+                <MenuItem mnemonicParsing="false" text="Crear nueva categoría" onAction="#crearNuevaCategoria"/>
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Accesibilidad">
+            <items>
+                <Menu mnemonicParsing="false" text="Cambiar modo">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Modo Claro" onAction="#ponerModoClaro"/>
+                        <MenuItem mnemonicParsing="false" text="Modo Oscuro" onAction="#ponerModoOscuro"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Lector de texto">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Activar"/>
+                        <MenuItem mnemonicParsing="false" text="Desactivar"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tamaño de texto">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Pequeño"/>
+                        <MenuItem mnemonicParsing="false" text="Normal"/>
+                        <MenuItem mnemonicParsing="false" text="Grande"/>
+                    </items>
+                </Menu>
+            </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Salir"/>
+    </menus>
+</MenuBar>

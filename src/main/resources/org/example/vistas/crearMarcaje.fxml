@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="472.0" prefWidth="473.0" styleClass="background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorCrearMarcaje">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="24.0" spacing="20.0">
+            <children>
+            <Label styleClass="titulo" text="Crear Marcaje">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+               <padding>
+                  <Insets bottom="3.0" />
+               </padding>
+            </Label>
+                <HBox alignment="TOP_CENTER" spacing="40.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="150.0" spacing="5.0">
+                            <children>
+                                <Label styleClass="subtitulo" text="Aula">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                        <ComboBox fx:id="cbAula" prefWidth="150.0" />
+                            </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="150.0" spacing="5.0">
+                            <children>
+                                <Label styleClass="subtitulo" text="Producto">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                        <ComboBox fx:id="cbProducto" prefWidth="150.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <VBox alignment="TOP_CENTER" spacing="5.0">
+                    <children>
+                        <Label styleClass="subtitulo" text="Tipo">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                  <Slider fx:id="sliderTipo" blockIncrement="1.0" majorTickUnit="1.0" max="1.0" minorTickCount="0" showTickMarks="true" snapToTicks="true" />
+                        <Label fx:id="labelTipo" text="Entrada salida" />
+                    </children>
+                </VBox>
+            <VBox alignment="TOP_CENTER" spacing="5.0">
+               <children>
+                  <Label styleClass="subtitulo" text="Fecha de marcado">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="fechaMarcaje" />
+               </children>
+            </VBox>
+                <CheckBox fx:id="validar" mnemonicParsing="false" prefHeight="47.0" prefWidth="425.0" text="Entiendo y confirmo que los datos son correctosy no se podran modificar posteriormente." wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font></CheckBox>
+                <HBox alignment="CENTER" prefHeight="0.0" prefWidth="425.0" spacing="30.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#crearMarcaje" styleClass="btn-confirmar" text="Confirmar">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#vaciarCampos" styleClass="btn-warning" text="Limpiar">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#cancelar" styleClass="btn-danger" text="Cancelar">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+        </VBox>
+      <Button layoutX="24.0" layoutY="22.0" mnemonicParsing="false" onAction="#mostrarAyuda" styleClass="btn-ayuda" text="Ayuda">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
