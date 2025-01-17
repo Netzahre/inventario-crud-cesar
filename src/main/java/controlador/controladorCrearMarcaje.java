@@ -123,6 +123,10 @@ public class controladorCrearMarcaje {
 
         CrudMarcajes crudMarcaje = new CrudMarcajes();
         crudMarcaje.crearMarcaje(marcaje);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Guardado");
+        alert.setContentText("Marcaje creado correctamente.");
+        alert.showAndWait();
         Stage stage = (Stage) cbAula.getScene().getWindow();
         stage.close();
     }

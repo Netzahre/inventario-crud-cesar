@@ -69,28 +69,42 @@ public class controladorFormularioProducto {
      */
     @FXML
     private void guardarDatos() {
-        CrudProducto crudProducto = new CrudProducto();
-        if (!verificarCampos()) {
-            return;
-        }
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Guardar");
+        alert.setContentText("¿Está seguro que desea guardar los cambios?");
+        ButtonType botonAceptar = new ButtonType("Si");
+        ButtonType botonCancelar = new ButtonType("No");
+        alert.getButtonTypes().setAll(botonAceptar, botonCancelar);
+        alert.showAndWait().ifPresent(boton -> {
+            if (boton == botonAceptar) {
+                CrudProducto crudProducto = new CrudProducto();
+                if (!verificarCampos()) {
+                    return;
+                }
 
-        if (producto == null) {
-            producto = new Producto();
-            producto.setDescripcion(taDescripcion.getText());
-            producto.setEan(Integer.parseInt(tfEAN.getText()));
-            producto.setKeyRFID(tfKeyRFID.getText());
-            producto.getCategorias().add(lvCategorias.getSelectionModel().getSelectedItem());
-            crudProducto.crearProducto(producto);
-        } else {
-            producto.setDescripcion(taDescripcion.getText());
-            producto.setEan(Integer.parseInt(tfEAN.getText()));
-            producto.setKeyRFID(tfKeyRFID.getText());
-            producto.getCategorias().add(lvCategorias.getSelectionModel().getSelectedItem());
-            crudProducto.actualizarProducto(producto.getId(), producto);
-        }
+                if (producto == null) {
+                    producto = new Producto();
+                    producto.setDescripcion(taDescripcion.getText());
+                    producto.setEan(Integer.parseInt(tfEAN.getText()));
+                    producto.setKeyRFID(tfKeyRFID.getText());
+                    producto.getCategorias().add(lvCategorias.getSelectionModel().getSelectedItem());
+                    crudProducto.crearProducto(producto);
+                } else {
+                    producto.setDescripcion(taDescripcion.getText());
+                    producto.setEan(Integer.parseInt(tfEAN.getText()));
+                    producto.setKeyRFID(tfKeyRFID.getText());
+                    producto.getCategorias().add(lvCategorias.getSelectionModel().getSelectedItem());
+                    crudProducto.actualizarProducto(producto.getId(), producto);
+                }
+                Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                alert2.setTitle("Información");
+                alert2.setContentText("Los cambios se han guardado correctamente.");
+                alert2.showAndWait();
+                Stage stage = (Stage) taDescripcion.getScene().getWindow();
+                stage.close();
+            }
+        });
 
-        Stage stage = (Stage) taDescripcion.getScene().getWindow();
-        stage.close();
     }
 
     /**
@@ -114,6 +128,9 @@ public class controladorFormularioProducto {
         }
         if (tfKeyRFID.getText().length() > 10) {
             mensaje.append("La clave RFID no puede tener más de 10 caracteres.\n");
+        }
+        if (tfEAN != null && !tfEAN.getText().matches("[0-9]+")) {
+            mensaje.append("El EAN solo puede contener números.\n");
         }
 
         if (mensaje.length() > 0) {

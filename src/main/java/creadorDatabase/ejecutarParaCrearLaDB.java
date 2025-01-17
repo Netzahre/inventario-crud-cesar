@@ -11,7 +11,7 @@ public class ejecutarParaCrearLaDB {
 
     public static void main(String[] args) {
         String rutaArchivo = "inventario.sql"; // Ruta a tu archivo SQL
-        String url = "jdbc:mysql://localhost:3306/inventario";
+        String url = "jdbc:mysql://localhost:3306/inventarioEsther";
         String usuario = "root"; // Cambia esto por tu usuario
         String contraseña = ""; // Cambia esto por tu contraseña
 

@@ -4,40 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74748e5d-4519-4692-a7d5-54344ea6fb7d" name="Changes" comment="" />
+    <list default="true" id="74748e5d-4519-4692-a7d5-54344ea6fb7d" name="Changes" comment="pues nada, me rindo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/controladorCrearMarcaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/controladorCrearMarcaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioAula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioAula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioCategoria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioProducto.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Netzahre&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Netzahre/AED_DAD_Crud2.git&quot;,
+    &quot;accountId&quot;: &quot;b1e4bc49-048b-4a87-9597-e45d94910b75&quot;
+  }
+}</component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2rDHpjU2E7jHK21GDvEywq8k8qM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.app.executor": "Run",
-    "Application.ejecutarApp.executor": "Run",
-    "Application.ejecutarParaCrearLaDB.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Pollito/Desktop/hibernate/AED_DAD_Crud",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.app.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ejecutarApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ejecutarParaCrearLaDB.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pollito/Desktop/hibernate/AED_DAD_Crud&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.dad_aed_proyectocrudeas.ejecutarApp" />
@@ -63,11 +86,46 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736086910598</updated>
-      <workItem from="1736086911556" duration="2652000" />
+      <workItem from="1736086911556" duration="3059000" />
+      <workItem from="1736090112813" duration="301000" />
+      <workItem from="1736090451202" duration="54000" />
+      <workItem from="1736090691566" duration="16000" />
     </task>
+    <task id="LOCAL-00001" summary="pues nada, me rindo">
+      <option name="closed" value="true" />
+      <created>1736089669993</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736089669993</updated>
+    </task>
+    <task id="LOCAL-00002" summary="pues nada, me rindo">
+      <option name="closed" value="true" />
+      <created>1736089859479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736089859479</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pues nada, me rindo" />
+    <option name="LAST_COMMIT_MESSAGE" value="pues nada, me rindo" />
   </component>
 </project>

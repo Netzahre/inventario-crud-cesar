@@ -63,34 +63,49 @@ public class controladorFormularioCategoria {
      */
     @FXML
     private void guardarDatos() {
-        CrudCategoria crudCategoria = new CrudCategoria();
-        if (!verificarCampos()) {
-            return;
-        }
-        if (categoria == null) {
-            Categoria nuevaCategoria = new Categoria();
-            nuevaCategoria.setNombre(tfNombre.getText());
-            nuevaCategoria.setDescripcion(taDescripcion.getText());
-            if (rbActivo.isSelected()) {
-                nuevaCategoria.setEstado("Activo");
-            } else {
-                nuevaCategoria.setEstado("Desactivado");
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Guardar");
+        alert.setContentText("¿Está seguro que desea guardar los cambios?");
+        ButtonType botonAceptar = new ButtonType("Si");
+        ButtonType botonCancelar = new ButtonType("No");
+        alert.getButtonTypes().setAll(botonAceptar, botonCancelar);
+        alert.showAndWait().ifPresent(boton -> {
+            if (boton == botonAceptar) {
+                CrudCategoria crudCategoria = new CrudCategoria();
+                if (!verificarCampos()) {
+                    return;
+                }
+                if (categoria == null) {
+                    Categoria nuevaCategoria = new Categoria();
+                    nuevaCategoria.setNombre(tfNombre.getText());
+                    nuevaCategoria.setDescripcion(taDescripcion.getText());
+                    if (rbActivo.isSelected()) {
+                        nuevaCategoria.setEstado("Activo");
+                    } else {
+                        nuevaCategoria.setEstado("Desactivado");
+                    }
+                    crudCategoria.crearCategoria(nuevaCategoria);
+                } else {
+                    Categoria nuevaCategoria = new Categoria();
+                    nuevaCategoria.setNombre(tfNombre.getText());
+                    nuevaCategoria.setDescripcion(taDescripcion.getText());
+                    if (rbActivo.isSelected()) {
+                        nuevaCategoria.setEstado("Activo");
+                    } else {
+                        nuevaCategoria.setEstado("Desactivado");
+                    }
+                    crudCategoria.actualizarCategoria(categoria.getId(), nuevaCategoria);
+                }
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+                alert1.setTitle("Guardado");
+                alert1.setHeaderText("Cambios guardados");
+                alert1.setContentText("Los cambios se han guardado correctamente.");
+                alert1.showAndWait();
+                Stage stage = (Stage) tfNombre.getScene().getWindow();
+                stage.close();
             }
-            crudCategoria.crearCategoria(nuevaCategoria);
-        } else {
-            Categoria nuevaCategoria = new Categoria();
-            nuevaCategoria.setNombre(tfNombre.getText());
-            nuevaCategoria.setDescripcion(taDescripcion.getText());
-            if (rbActivo.isSelected()) {
-                nuevaCategoria.setEstado("Activo");
-            } else {
-                nuevaCategoria.setEstado("Desactivado");
-            }
-            crudCategoria.actualizarCategoria(categoria.getId(), nuevaCategoria);
-        }
+        });
 
-        Stage stage = (Stage) tfNombre.getScene().getWindow();
-        stage.close();
     }
 
     /**

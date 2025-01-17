@@ -73,26 +73,39 @@ public class controladorFormularioAula {
 
     @FXML
     private void guardarDatos() {
-        CrudAula crudAula = new CrudAula();
-        if (!verificarCampos()) {
-
-            return;
-        }
-
-        if (aula == null) {
-            aula = new Aula();
-            aula.setNumeracion(spPabellon.getValue() + "." + spPiso.getValue() + "." + spAula.getValue());
-            aula.setDescripcion(taDescripcion.getText());
-            aula.setIp(tfIp.getText());
-            crudAula.crearAula(aula);
-        } else {
-            aula.setNumeracion(spPabellon.getValue() + "." + spPiso.getValue() + "." + spAula.getValue());
-            aula.setDescripcion(taDescripcion.getText());
-            aula.setIp(tfIp.getText());
-            crudAula.actualizarAula(aula.getId(), aula);
-        }
-        Stage stage = (Stage) spPabellon.getScene().getWindow();
-        stage.close();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Guardar");
+        alert.setContentText("¿Está seguro que desea guardar los cambios?");
+        ButtonType botonAceptar = new ButtonType("Si");
+        ButtonType botonCancelar = new ButtonType("No");
+        alert.getButtonTypes().setAll(botonAceptar, botonCancelar);
+        alert.showAndWait().ifPresent(boton -> {
+            if (boton == botonAceptar) {
+                CrudAula crudAula = new CrudAula();
+                if (!verificarCampos()) {
+                    return;
+                }
+                if (aula == null) {
+                    aula = new Aula();
+                    aula.setNumeracion(spPabellon.getValue() + "." + spPiso.getValue() + "." + spAula.getValue());
+                    aula.setDescripcion(taDescripcion.getText());
+                    aula.setIp(tfIp.getText());
+                    crudAula.crearAula(aula);
+                } else {
+                    aula.setNumeracion(spPabellon.getValue() + "." + spPiso.getValue() + "." + spAula.getValue());
+                    aula.setDescripcion(taDescripcion.getText());
+                    aula.setIp(tfIp.getText());
+                    crudAula.actualizarAula(aula.getId(), aula);
+                }
+                Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+                alert1.setTitle("Guardado");
+                alert1.setHeaderText("Cambios guardados");
+                alert1.setContentText("Los cambios se han guardado correctamente.");
+                alert1.showAndWait();
+                Stage stage = (Stage) spPabellon.getScene().getWindow();
+                stage.close();
+            }
+        });
     }
 
     /**

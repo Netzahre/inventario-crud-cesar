@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS inventario;
-CREATE DATABASE inventario;
-USE inventario;
+DROP DATABASE IF EXISTS inventarioEsther;
+CREATE DATABASE inventarioEsther;
+USE inventarioEsther;
 
 CREATE TABLE Aula (
     idAula INT AUTO_INCREMENT PRIMARY KEY,
