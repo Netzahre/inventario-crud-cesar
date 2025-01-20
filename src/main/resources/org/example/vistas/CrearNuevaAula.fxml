@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="505.0" prefWidth="473.0" styleClass="background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorFormularioAula">
@@ -21,5 +22,24 @@
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
+      <HBox alignment="CENTER" layoutX="81.0" layoutY="436.0" spacing="30.0">
+         <children>
+            <Button fx:id="btGuardar" mnemonicParsing="false" onAction="#guardarDatos" styleClass="btn-confirmar" text="Confirmar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btLimpiar" mnemonicParsing="false" onAction="#limpiar" styleClass="btn-warning" text="Limpiar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#cancelar" styleClass="btn-danger" text="Cancelar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

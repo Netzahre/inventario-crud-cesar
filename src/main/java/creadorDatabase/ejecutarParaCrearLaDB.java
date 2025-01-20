@@ -10,10 +10,10 @@ public class ejecutarParaCrearLaDB {
     //Con algunas entradas ya creadas para que puedas probar el programa sin lios
 
     public static void main(String[] args) {
-        String rutaArchivo = "inventario.sql"; // Ruta a tu archivo SQL
+        String rutaArchivo = "inventario.sql";
         String url = "jdbc:mysql://localhost:3306/inventarioEsther";
-        String usuario = "root"; // Cambia esto por tu usuario
-        String contraseña = ""; // Cambia esto por tu contraseña
+        String usuario = "root";
+        String contraseña = "Pantalla1";
 
         crearDB(rutaArchivo, url, usuario, contraseña);
     }

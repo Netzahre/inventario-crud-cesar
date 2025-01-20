@@ -11,6 +11,8 @@ import modelo.Aula;
 import modelo.Categoria;
 import modelo.Producto;
 
+import java.util.Objects;
+
 public class controladorFormularioProducto {
     private Producto producto;
     @FXML
@@ -52,9 +54,9 @@ public class controladorFormularioProducto {
             taDescripcion.setText(producto.getDescripcion());
             tfEAN.setText(String.valueOf(producto.getEan()));
             tfKeyRFID.setText(producto.getKeyRFID());
-            for (Categoria categoria : lvCategorias.getItems()) {
-                for (Categoria categoriaProducto : producto.getCategorias()) {
-                    if (categoria.getId().equals(categoriaProducto.getId())) {
+            if (producto.getCategoria() != null) {
+                for (Categoria categoria : lvCategorias.getItems()) {
+                    if (Objects.equals(categoria.getId(), producto.getCategoria().getId())) {
                         lvCategorias.getSelectionModel().select(categoria);
                     }
                 }
@@ -87,13 +89,13 @@ public class controladorFormularioProducto {
                     producto.setDescripcion(taDescripcion.getText());
                     producto.setEan(Integer.parseInt(tfEAN.getText()));
                     producto.setKeyRFID(tfKeyRFID.getText());
-                    producto.getCategorias().add(lvCategorias.getSelectionModel().getSelectedItem());
+                    producto.setCategoria(lvCategorias.getSelectionModel().getSelectedItem());
                     crudProducto.crearProducto(producto);
                 } else {
                     producto.setDescripcion(taDescripcion.getText());
                     producto.setEan(Integer.parseInt(tfEAN.getText()));
                     producto.setKeyRFID(tfKeyRFID.getText());
-                    producto.getCategorias().add(lvCategorias.getSelectionModel().getSelectedItem());
+                    producto.setCategoria(lvCategorias.getSelectionModel().getSelectedItem());
                     crudProducto.actualizarProducto(producto.getId(), producto);
                 }
                 Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
@@ -195,21 +197,5 @@ public class controladorFormularioProducto {
                 stage.close();
             }
         });
-    }
-
-    /**
-     * Método que selecciona todos los elementos de un ListView.
-     */
-    @FXML
-    private void seleccionarTodoListview() {
-        lvCategorias.getSelectionModel().selectAll();
-    }
-
-    /**
-     * Método que deselecciona todos los elementos de un ListView.
-     */
-    @FXML
-    private void deseleccionarTodoListview() {
-        lvCategorias.getSelectionModel().clearSelection();
     }
 }

@@ -15,13 +15,14 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorVerMarcajes">
     <children>
         <fx:include source="../reutilizables/menuSuperior.fxml" />
-        <TableView fx:id="tbMarcaje" layoutY="315.0" prefHeight="453.0" prefWidth="1366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="315.0">
+        <TableView fx:id="tbMarcaje" layoutY="315.0" prefHeight="453.0" prefWidth="1265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="315.0">
             <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="colAula" prefWidth="253.0" text="Aula" />
-                <TableColumn fx:id="colProducto" minWidth="0.0" prefWidth="492.0" text="Producto" />
-                <TableColumn fx:id="colTipo" minWidth="0.0" prefWidth="209.0" text="Tipo" />
-                <TableColumn fx:id="colTimeStamp" minWidth="0.0" prefWidth="336.0" text="Fecha" />
+                <TableColumn fx:id="colProducto" minWidth="0.0" prefWidth="405.0" text="Producto" />
+            <TableColumn fx:id="colCategoria" minWidth="0.0" prefWidth="241.0" text="Categoria del producto" />
+                <TableColumn fx:id="colTipo" minWidth="0.0" prefWidth="171.0" text="Tipo" />
+                <TableColumn fx:id="colTimeStamp" maxWidth="372.0" minWidth="-1.0" prefWidth="220.0" text="Fecha" />
             </columns>
         </TableView>
         <VBox alignment="TOP_CENTER" layoutX="462.0" layoutY="32.0">
@@ -107,8 +108,8 @@
                   </VBox>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="98.0" styleClass="btn-confirmar" text="Filtrar" onAction="#filtrarMarcajes" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="98.0" styleClass="btn-confirmar" text="Limpiar" onAction="#limpiarFiltros"/>
+            <Button mnemonicParsing="false" onAction="#filtrarMarcajes" prefHeight="35.0" prefWidth="98.0" styleClass="btn-confirmar" text="Filtrar" />
+            <Button mnemonicParsing="false" onAction="#limpiarFiltros" prefHeight="35.0" prefWidth="98.0" styleClass="btn-confirmar" text="Limpiar" />
          </children>
       </HBox>
     </children>

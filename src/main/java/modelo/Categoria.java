@@ -23,10 +23,7 @@ public class Categoria {
     @Column(name = "Estado", nullable = false, length = 20)
     private String estado;
 
-    @ManyToMany (fetch = FetchType.EAGER)
-    @JoinTable(name = "productoporcategoria",
-            joinColumns = @JoinColumn(name = "idCategoria"),
-            inverseJoinColumns = @JoinColumn(name = "idProducto"))
+    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
     private Set<Producto> productos = new LinkedHashSet<>();
 
     public Integer getId() {

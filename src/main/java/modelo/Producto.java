@@ -23,14 +23,13 @@ public class Producto {
     @Column(name = "keyRFID", nullable = false, length = 10)
     private String keyRFID;
 
-    @OneToMany(mappedBy = "idProducto", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idProducto", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private Set<Marcaje> marcajes = new LinkedHashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinTable(name = "productoporcategoria",
-            joinColumns = @JoinColumn(name = "idProducto"),
-            inverseJoinColumns = @JoinColumn(name = "idCategoria"))
-    private Set<Categoria> categorias = new LinkedHashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "idCategoria", nullable = true)
+    private Categoria categoria;
+
 
     public Integer getId() {
         return id;
@@ -72,12 +71,12 @@ public class Producto {
         this.marcajes = marcajes;
     }
 
-    public Set<Categoria> getCategorias() {
-        return categorias;
+    public Categoria getCategoria() {
+        return categoria;
     }
 
-    public void setCategorias(Set<Categoria> categorias) {
-        this.categorias = categorias;
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     @Override

@@ -2,6 +2,7 @@ package CRUD;
 
 import modelo.Aula;
 import modelo.Categoria;
+import modelo.Producto;
 import org.hibernate.Session;
 
 import java.util.List;
@@ -75,6 +76,10 @@ public class CrudCategoria {
             sesion.beginTransaction();
             Categoria categoriaDB = sesion.get(Categoria.class, idCategoria);
             if (categoriaDB != null) {
+                for (Producto producto : categoriaDB.getProductos()) {
+                    producto.setCategoria(null);
+                    sesion.merge(producto);
+                }
                 sesion.remove(categoriaDB);
                 sesion.getTransaction().commit();
             } else {

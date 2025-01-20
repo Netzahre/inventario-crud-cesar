@@ -20,14 +20,6 @@ public class CrudProducto {
         try (Session sesion = hibernateUtil.getSessionFactory().openSession()) {
             sesion.beginTransaction();
 
-            // Asegurarse de que las categorías estén gestionadas (merge si es necesario)
-            for (Categoria categoria : producto.getCategorias()) {
-                // Si la categoría no está gestionada, usamos merge para asegurar que sea gestionada
-                if (categoria.getId() != null && !sesion.contains(categoria)) {
-                    categoria = sesion.merge(categoria);  // Convertimos la categoría a una entidad gestionada
-                }
-            }
-
             sesion.merge(producto);
 
             sesion.getTransaction().commit();
@@ -64,6 +56,7 @@ public class CrudProducto {
                 productoDB.setDescripcion(producto.getDescripcion());
                 productoDB.setKeyRFID(producto.getKeyRFID()); // Corregido
                 productoDB.setEan(producto.getEan());
+                productoDB.setCategoria(producto.getCategoria());
                 sesion.merge(productoDB);
                 sesion.getTransaction().commit();
             } else {
@@ -81,18 +74,11 @@ public class CrudProducto {
     public void borrarProducto(int idProducto) {
         try (Session sesion = hibernateUtil.getSessionFactory().openSession()) {
             sesion.beginTransaction();
-
-            // Obtener el producto
             Producto producto = sesion.get(Producto.class, idProducto);
 
             if (producto != null) {
-                // Desvincular las categorías asociadas del producto
-                for (Categoria categoria : producto.getCategorias()) {
-                    categoria.setProductos(null);  // Desvinculamos la categoría del producto
-                    sesion.update(categoria);  // Actualizamos la categoría en la base de datos
-                }
+                producto.setCategoria(null);
 
-                // Ahora se puede eliminar el producto sin afectar a las categorías
                 sesion.remove(producto);
 
                 sesion.getTransaction().commit();
@@ -122,14 +108,14 @@ public class CrudProducto {
     /**
      * Método que cambia las categorías de un producto.
      * @param idProducto ID del producto a cambiar.
-     * @param categorias Nuevas categorías.
+     * @param categoria Nueva categoría.
      */
-    public void cambiarCategorias(int idProducto, Set<Categoria> categorias) {
+    public void cambiarCategorias(int idProducto, Categoria categoria) {
         try (Session sesion = hibernateUtil.getSessionFactory().openSession()) {
             sesion.beginTransaction();
             Producto producto = sesion.get(Producto.class, idProducto);
             if (producto != null) {
-                producto.setCategorias(categorias);
+                producto.setCategoria(categoria);
                 sesion.merge(producto);
                 sesion.getTransaction().commit();
             } else {
@@ -163,9 +149,9 @@ public class CrudProducto {
             }
 
                 if (nombreCategoria != null && nombreCategoria.equals("Sin categoria")) {
-                hql.append(" and size(p.categorias) = 0");
+                hql.append(" and categoria is null");
             } else if (nombreCategoria != null) {
-                hql.append(" and :categoria in elements(p.categorias)");
+                hql.append(" and :categoria = p.categoria");
             }
 
             Query<Producto> query = sesion.createQuery(hql.toString(), Producto.class);

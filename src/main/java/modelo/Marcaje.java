@@ -12,11 +12,12 @@ public class Marcaje {
     @Column(name = "idMarcaje", nullable = false)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    //si se borra un producto, se borran todos los marcajes asociados
+    @ManyToOne(fetch = FetchType.EAGER, optional = false, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "idProducto", nullable = false)
     private Producto idProducto;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "idAula", nullable = false)
     private Aula idAula;
 

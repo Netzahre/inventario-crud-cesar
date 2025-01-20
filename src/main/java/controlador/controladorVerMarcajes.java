@@ -32,6 +32,8 @@ public class controladorVerMarcajes {
     @FXML
     private TableColumn<Marcaje, String> colTimeStamp;
     @FXML
+    private TableColumn<Marcaje, String> colCategoria;
+    @FXML
     private DatePicker fInicio;
     @FXML
     private DatePicker fFin;
@@ -41,6 +43,7 @@ public class controladorVerMarcajes {
     private ComboBox<Producto> listaProd;
     @FXML
     private Spinner<Integer> spPabellon;
+
 
     /**
      * Método que se ejecuta al cargar la vista
@@ -63,6 +66,8 @@ public class controladorVerMarcajes {
     private void inicializarColumnas() {
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colProducto.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper<>(cellData.getValue().getIdProducto().getDescripcion()));
+        colCategoria.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper<>(cellData.getValue().getIdProducto().getCategoria().getNombre()));
+
         colAula.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper<>(cellData.getValue().getIdAula().getNumeracion()));
         colTipo.setCellValueFactory(new PropertyValueFactory<>("tipoTexto"));
         colTimeStamp.setCellValueFactory(cellData -> {
@@ -70,6 +75,7 @@ public class controladorVerMarcajes {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
             return new ReadOnlyObjectWrapper<>(timeStamp.format(formatter));
         });
+
     }
 
     /**
