@@ -4,7 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+
+import java.io.File;
 import java.io.IOException;
 
 public class controladorMenuSuperior {
@@ -184,5 +187,28 @@ public class controladorMenuSuperior {
         Scene scene = stage.getScene();
         scene.getStylesheets().clear();
         scene.getStylesheets().add(getClass().getResource("/org/example/css/nocturno.css").toExternalForm());
+    }
+
+    @FXML
+    private void abrirAyuda() {
+        Stage helpStage = new Stage();
+        WebView webView = new WebView();
+
+        File ayuda = new File("src/main/resources/Ayuda/ayudaCrudAula.html");
+        if (ayuda.exists()) {
+            webView.getEngine().load(ayuda.toURI().toString());
+        } else {
+            System.out.println("No se encontro el arcihvo.");
+        }
+
+        Scene helpScene = new Scene(webView, 800, 600);
+        helpStage.setTitle("Ayuda");
+        helpStage.setScene(helpScene);
+        helpStage.show();
+    }
+
+    @FXML
+    private void salir(){
+        System.exit(0);
     }
 }

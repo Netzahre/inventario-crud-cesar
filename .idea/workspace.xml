@@ -4,29 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74748e5d-4519-4692-a7d5-54344ea6fb7d" name="Changes" comment="pues nada, me rindo">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="74748e5d-4519-4692-a7d5-54344ea6fb7d" name="Changes" comment="teoria confirmada. Funca.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inventario.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CRUD/CrudCategoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CRUD/CrudCategoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CRUD/CrudProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CRUD/CrudProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioProducto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/controladorFormularioProducto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/controladorVerMarcajes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/controladorVerMarcajes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/creadorDatabase/ejecutarParaCrearLaDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/creadorDatabase/ejecutarParaCrearLaDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Marcaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Marcaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/formularioAula.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/formularioAula.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/formularioCategoria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/formularioCategoria.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/formularioProductos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/formularioProductos.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/vistas/CrearNuevaAula.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/vistas/CrearNuevaAula.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/vistas/ModificarAula.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/vistas/ModificarAula.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/vistas/ModificarCategoria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/vistas/ModificarCategoria.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/vistas/ModificarProducto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/vistas/ModificarProducto.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/vistas/crearNuevaCategoria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/vistas/crearNuevaCategoria.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/vistas/crearNuevoProducto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/vistas/crearNuevoProducto.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/vistas/verMarcajes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/vistas/verMarcajes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controlador/controladorMenuSuperior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controlador/controladorMenuSuperior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/css/nocturno.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/css/nocturno.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/menuSuperior.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/example/reutilizables/menuSuperior.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +97,12 @@
       <workItem from="1737390321947" duration="23000" />
       <workItem from="1737392258829" duration="330000" />
       <workItem from="1737393805395" duration="714000" />
-      <workItem from="1737394533355" duration="2776000" />
+      <workItem from="1737394533355" duration="2803000" />
+      <workItem from="1737475147132" duration="13000" />
+      <workItem from="1737568240176" duration="1876000" />
+      <workItem from="1737571723786" duration="757000" />
+      <workItem from="1737573898611" duration="758000" />
+      <workItem from="1737643064937" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="pues nada, me rindo">
       <option name="closed" value="true" />
@@ -141,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737134988909</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="teoria confirmada. Funca.">
+      <option name="closed" value="true" />
+      <created>1737397350005</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737397350005</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +155,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pues nada, me rindo" />
-    <option name="LAST_COMMIT_MESSAGE" value="pues nada, me rindo" />
+    <MESSAGE value="teoria confirmada. Funca." />
+    <option name="LAST_COMMIT_MESSAGE" value="teoria confirmada. Funca." />
   </component>
 </project>
