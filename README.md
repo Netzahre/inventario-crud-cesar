@@ -1,15 +1,12 @@
 # Inventory Management System
 
 ## Description
-A desktop application for managing a product inventory. It allows users to perform CRUD (Create, Read, Update, Delete) operations on products, categories, and suppliers.
+A desktop application for managing a product inventory. It allows users to perform CRUD (Create, Read, Update, Delete) operations.
 
 ## Features
 - Product Management: Add, view, edit, and delete products.
 - Category Management: Add, view, edit, and delete categories.
-- Supplier Management: Add, view, edit, and delete suppliers.
 - Search and Filtering: Search and filter products by various criteria.
-- Reporting: Generate reports on inventory status.
-- User Authentication: Secure access to the application.
 
 ## Technologies Used
 - Java
@@ -56,7 +53,6 @@ A desktop application for managing a product inventory. It allows users to perfo
 
 ## Usage
 1. After successfully building and running the application, the main window will appear.
-2. Navigate through the different sections (Products, Categories, Suppliers) using the menu or toolbar.
+2. Navigate through the different sections using the menu or toolbar.
 3. Use the provided buttons and forms to add, edit, view, or delete records.
 4. Utilize search and filter functionalities to find specific items.
-5. Generate reports as needed.
